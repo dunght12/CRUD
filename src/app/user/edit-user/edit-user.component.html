@@ -1,0 +1,21 @@
+<form action="" method="POST">
+    <h3 class="mb-4">Add user</h3>
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}"> 
+    </div>
+    <div class="form-group">
+        <label for="">Age</label>
+        <input type="number" class="form-control" [(ngModel)]="user.age" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="">Phone</label>
+        <input class="form-control" [(ngModel)]="user.phone" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onEditUser()">Save</button>
+    <button type="button" [routerLink]="['/users']" class="btn btn-primary ml-2">Back</button>
+</form>
